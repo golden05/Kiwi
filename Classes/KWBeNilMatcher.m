@@ -11,22 +11,19 @@
 
 @implementation KWBeNilMatcher
 
-#pragma mark -
-#pragma mark Getting Matcher Strings
+#pragma mark - Getting Matcher Strings
 
 + (NSArray *)matcherStrings {
   return @[@"beNil"];
 }
 
-#pragma mark -
-#pragma mark Matching
+#pragma mark - Matching
 
 - (BOOL)evaluate {
   return (BOOL)(self.subject == nil);
 }
 
-#pragma mark -
-#pragma mark Getting Failure Messages
+#pragma mark - Getting Failure Messages
 
 - (NSString *)failureMessageForShould {
   return [NSString stringWithFormat:@"expected subject to be nil, got %@",
